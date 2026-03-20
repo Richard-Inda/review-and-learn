@@ -1,0 +1,163 @@
+<!-- Open in Browser to view the notes -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notes on HTML Syntax</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Headings</h1>
+            <hr>
+            <h1>This is h1</h1>
+            <h2>This is h2</h2>
+            <h3>This is h3</h3>
+            <h4>This is h4</h4>
+            <h5>This is h5</h5>
+            <h6>This is h6</h6>
+        </div>
+        <div class="blocking">
+            <h1>Blocking Elements</h1>
+            <hr>
+            <h5>This is h1-h6</h5>
+            <div>This is div</div>
+            <p>This is p. These block elements take up the full width of the container, start on a new line, and have a margin around them.</p>
+            <div>
+                <span>This is a span tag. </span><span>This is another span.<span> Both of these are in the same div tag. This gives us more control over the styling of the page.</span>
+            </div>
+            <h1>In-line Elements</h1>
+            <hr>
+            <strong>This is strong</strong>
+            <em>This is em</em>
+            <span>This is span. these elements take up only as much width as needed, and do not start on a new line.</span>
+        </div>
+        <div class="Lists">
+            <h1>Lists</h1>
+            <hr>
+            <p>Unordered list</p>
+            <ul>
+                <li>Each item is li and held withing an ul element.</li>
+                <li>The bullets are automatically assigned.</li>
+            </ul>
+            <p>Ordered list</p>
+            <ol>
+                <li>Each item is li and held withing an ol element.</li>
+                <li>The numbers are automatically assigned.</li>
+            </ol>
+        </div>
+        <div class="table">
+            <h1>Tables</h1>
+            <hr>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Full Name</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>thead</td>
+                        <td>Table Header</td>
+                        <td>Defines the header of the table. Contains the column names. Important for accessibility.</td>
+                    </tr>
+                    <tr>
+                        <td>tbody</td>
+                        <td>Table Body</td>
+                        <td>Defines the body of the table. Contains the actual data. Important for accessibility.</td>
+                    </tr>
+                    <tr>
+                        <td>tfoot</td>
+                        <td>Table Footer</td>
+                        <td>Defines the footer of the table. Used for summary of data. Important for accessibility.</td>
+                    </tr>
+                    <tr>
+                        <td>tr</td>
+                        <td>Table Row</td>
+                        <td>Defines a row of the table. Contains one or more cells. Used to group data into rows.</td>
+                    </tr>
+                    <tr>
+                        <td>td</td>
+                        <td>Table Data</td>
+                        <td>Defines a cell of the table. Contains the actual data. Used to group data into cells.</td>
+                    </tr>
+                    <tr>
+                        <td>th</td>
+                        <td>Table Header</td>
+                        <td>Defines a header cell of the table. Contains the column names. Used to group data into header cells.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Above are tags</td>
+                        <td>Above are names</td>
+                        <td>Above are purposes</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="form">
+            <h1>Forms</h1>
+            <hr>
+            <form action="https://www.google.com" method="POST">
+                <label for="name">This is a label tag, it describes the input field:</label>
+                <div>
+                    <div>
+                        <label> input tag with type text</label>
+                        <input style="field-sizing: content" type="text" placeholder="Placeholder text">
+                    </div>
+                    <div>
+                        <label> input tag with type number</label>
+                        <input style="field-sizing: content" type="number" placeholder="Placeholder text">
+                    </div>
+                    <div>
+                        <label> input tag with type date</label>
+                        <input style="field-sizing: content" type="date" placeholder="01/01/2026">
+                    </div>
+                    <div>
+                        <label> textarea tag </label>
+                        <textarea style="field-sizing: content" placeholder="Multi-Line Input: Placeholder text"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <button style="field-sizing: content" type="submit">This is a button tag with type submit</button>
+                    <br>
+                    <button style="field-sizing: content" type="reset">This is a button tag with type reset</button>
+                    <br>
+                    <input type="submit" value="This is a input tag with type submit">
+                </div>
+            </form>
+            <p>
+                All these form tags take attributes like name, id, and placeholder that describe the data being input.
+                <br>
+                Note, I used css style="field-sizing: content" to make the input fields and textarea take up the full width of the container. Be default, input fields and textarea are 100% width of the container.
+            </p>
+        </div>
+        <div class="image">
+            <h1>Images</h1>
+            <hr>
+            <img src="HtmlBlocking.jpg" alt="HTML Block Image" width="300" height="300">
+            <p>This is an image tag. src is the source of the image, and alt is the alternative text for the image.</p>
+            <br>
+            <img src="HtmlBlocking.png" alt="This text is in the image alt attribute. I wrote the wrong src here to show what the alt attribute looks like when the image is not found.">
+            <div>
+                <img src="HtmlBlocking.jpg" alt="HTML Block Image" width="100" height="100">
+                <span>Importantly, images are in-line elements. In this example i set width and height to 100px to make the image smaller.</span>
+            </div>  
+        </div>
+        <div class="blockquotes">
+            <h1>Blockquotes</h1>
+            <hr>    
+            <blockquote>This is a blockquote tag. It is used to quote a block of text. It is displayed as a block element.</blockquote>
+        </div>
+        <div class="Semantic Tags">
+            <h1>Semantic Tags</h1>
+            <hr>
+            <p>Semantic tags describe the content to the browser, search engines, and developers. They are used to make the page more readable and accessible.</p>
+            <p><strong>Abbreviations</strong> using abbr tag: <abbr title="Hypertext Markup Language">HTML</abbr></p>
+            <p><strong>Citations</strong> using cite tag: <cite>The Great Gatsby</cite> by F. Scott Fitzgerald</p>
+            <p><strong>Hyperlink</strong> using an a tag: <a href="Semantics.html">This is a link to the semantics page</a></p>
+        </div>
+        <div style="margin-top: 300px;">
+    </body>
+</html>
