@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .examples {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        .examples-box-container {
+            padding: 10px;
+            margin: 10px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Positioning</h1>
+    <div class="position-static">
+        <h3>position: static</h3>
+        <ul>
+            <li>The default position of the element. It is positioned according to the normal flow of the document.</li>
+        </ul>
+    </div>
+    <div class="position-relative">
+        <h3>position: relative</h3>
+        <ul>
+            <li>The element becomes a positioned ancestor for any absolutely positioned children.</li>
+            <li>The element is positioned relative to its normal position.</li>
+            <li>The element can be offset with the top, right, bottom, and left properties.</li>
+        </ul>
+
+    </div>
+    <div class="position-absolute">
+        <h3>position: absolute</h3>
+        <ul>
+            <li>The element is positioned with an absolute positional value (exact values, top, right, bottom, left).
+                The
+                position is relative to the nearest positioned ancestor.</li>
+            <li>If no positioned ancestor is found, the position is relative to the viewport.</li>
+        </ul>
+    </div>
+    <div class="position-fixed">
+        <h3>position: fixed</h3>
+        <ul>
+            <li>The element is fixed to the viewport and does not move when the page is scrolled.</li>
+        </ul>
+    </div>
+    <div class="position-initial">
+        <h3>position: initial</h3>
+        <ul>
+            <li>The element is set to its initial value.</li>
+        </ul>
+    </div>
+    <div class="position-inherit">
+        <h3>position: inherit</h3>
+        <ul>
+            <li>The element is set to the value of its parent element.</li>
+        </ul>
+    </div>
+    <div class="examples-box-container">
+        <h3>Examples</h3>
+        <hr>
+        <p> Everything on the page above is statically positioned. The only element that is not statically positioned is
+            the fixed element.</p>
+        <div class="examples" style="position: absolute; top:200px;">
+            <h3>Absolutely Positioned Element</h3>
+                <p>position: absolute; top:200px;</p>
+                <p>positioned relative to the examples box container</p>
+        </div>
+        <div class="button" style="position: fixed; right:0px;bottom:100px;">
+            <p>Fixed Element</p>
+        </div>
+    </div>
+</body>
+
+</html>

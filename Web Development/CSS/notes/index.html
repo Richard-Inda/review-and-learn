@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .example {
+            padding-left: 20px;
+        }
+
+        a {
+            color: orange;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:active {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="notes">
+        <h1>CSS Notes</h1>
+        <hr>
+        <div class="css-notes">
+            <h3 style="text-align: center;">Adding CSS to your HTML</h3>
+            <p>3 methods for adding CSS to your HTML:</p>
+            <ol>
+                <li>Inline - adding it directly to the html tag (like any other attribute)</li>
+                <div class="example">
+                    <span>
+                        <strong>Example:</strong> &lt;h1 style="color: red"&gt;
+                    </span>
+                    <span style="color: red;">This is a red heading</span>
+                </div>
+                <ul class="css-source-lists">
+                    <li class="css-source-lists">Never do this</li>
+                    <li>Very limited scope and manual overrides are difficult</li>
+                </ul>
+                <li>Internal - using a style element in the head of the HTML document. Not great</li>
+                <div class="example">
+                    <span>
+                        <strong>Example:</strong> &lt;head&gt;
+                        &lt;style&gt;.example{padding-left:20px;}&lt;/style&gt;&lt;/head&gt;
+                    </span>
+                    <span>This will indent my examples</span>
+                </div>
+                <ul class="css-source-lists">
+                    <li>Not reusable</li>
+                    <li>Not scalable</li>
+                    <li>Not maintainable</li>
+                </ul>
+                <li>External - using a separate CSS file</li>
+                <div class="example">
+                    <span>
+                        <strong>Example:</strong> &lt;head&gt; &lt;link rel="stylesheet"
+                        href="style.css"&gt;&lt;/head&gt;
+                    </span>
+                    <span>This will link to my style.css file and apply the styles to the page. The lists are styled
+                        using them</span>
+                </div>
+                <ul class="css-source-lists">
+                    <li>Best practice</li>
+                    <li>Modular and reusable</li>
+                    <li>Scalable and maintainable</li>
+                </ul>
+            </ol>
+        </div>
+        <hr>
+        <div class="declarations">
+            <h3 style="text-align: center;">CSS Declarations</h3>
+            <img src="declaration_block.png" alt="Declaration Block Example Breakdown">
+            <h3>Selectors</h3>
+            <ul>
+                <li>Element Selector</li>
+                <div class="example">
+                    <span>
+                        <strong>Example:</strong> &lt;h1&gt;
+                    </span>
+                    <span>This will select all h1 elements</span>
+                </div>
+                <li>Class Selector</li>
+                <div class="example">
+                    <span>
+                        <strong>Example:</strong> .example
+                    </span>
+                    <span>The . symbol before the class name indicates that this is a class selector.</span>
+                </div>
+                <li>ID Selector</li>
+                <div class="example">
+                    <span>
+                        <strong>Example:</strong> #example
+                    </span>
+                    <span>The # symbol before the id name indicates that this is an id selector</span>
+                </div>
+                <li>Attribute Selector</li>
+                <div class="example">
+                    <span>
+                        <strong>Example:</strong> input[type="text"]
+                    </span>
+                    <span>The [] symbol before the attribute name indicates that this is an attribute selector</span>
+                </div>
+                <li>Pseudo-class Selector</li>
+                <div class="example">
+                    <span>
+                        <strong>Example:</strong> input:focus
+                    </span>
+                    <span>The : symbol before the pseudo-class name indicates that this is a pseudo-class
+                        selector</span>
+                </div>
+                <li>Pseudo-element Selector</li>
+                <div class="example">
+                    <span>
+                        <strong>Example:</strong> ::before
+                    </span>
+                    <span>The :: symbol before the pseudo-element name indicates that this is a pseudo-element
+                        selector</span>
+                </div>
+            </ul>
+        </div>
+        <hr>
+        <div class="properties">
+            <h2 style="text-align: center;">CSS Properties</h2>
+            <h3>Color Properties</h3>
+            <ul>
+                <li style="background-color: red;"> background-color: Sets the background color of the element</li>
+                <li style="color: red;"> color: Sets the color of the text</li>
+            </ul>
+            <h3>Font Properties</h3>
+            <ul>
+                <li style="font-family: cursive;"> font-family:Sets the font of the text. You
+                    can give multiple fonts separated by commas to specify a fallback font.</li>
+                <li style="font-size: 20px;"> font-size: Sets the size of the text. You can use relative units like
+                    em or rem.</li>
+                <li style="font-weight: bold;"> font-weight: Sets the weight of the text. Like bold, normal, or
+                    lighter.</li>
+                <li style="font-style: italic;"> font-style: Sets the style of the text. Like italic, normal, or
+                    oblique.</li>
+                <li style="text-align: center;"> text-align: Sets the alignment of the text like left, right,
+                    center, or justify.</li>
+                <li style="text-decoration: underline;"> text-decoration: Sets the decoration of the text like
+                    underline, overline, line-through, or none.</li>
+                <li style="text-transform: uppercase;"> text-transform: Sets the transformation of the text like
+                    uppercase, lowercase, or capitalize.</li>
+                <li style="letter-spacing: .2em;"> letter-spacing: Sets the spacing between letters.</li>
+                <li style="word-spacing: 1em;"> word-spacing: Sets the spacing between words.</li>
+                <li style="font: italic bold 20px/30px Arial, Helvetica, sans-serif;"> font: Short hand that allows
+                    you to set the font-style, font-weight, font-size, and font-family in one line.</li>
+                <li style="line-height: 2.5;"> line-height: Sets the space between lines</li>
+            </ul>
+            <img src="Box-Model.jpg" alt="Box Model Example Breakdown" style="display: block; margin: 0 auto;">
+            <h3>Box Model Properties</h3>
+            <ul>
+                <li class="borderexamples">border: Short hand that allows you to set the border-width, border-style,
+                    and border-color in one line. Applying this styling to a class and giving it to all other
+                    examples</li>
+                <li class="borderexamples" style="border-left: 5px solid black;">border-[left,right,top,bottom]:
+                    Short hand to set the width, style, and color of the specified side of the border</li>
+                <li class="borderexamples" style="border-radius: 10px;">border-radius: Sets the radius of the
+                    corners of the border of the element</li>
+                <li class="borderexamples" style="border-width: 10px">
+                    border-width: Sets the width of the border of the element</li>
+                <li class="borderexamples" style="border-style: dotted">
+                    border-style: Sets the style of the border of the element</li>
+                <li class="borderexamples" style="padding: 10px;">padding:-(left, right, top, bottom) Sets the
+                    padding inside the border of
+                    the element</li>
+                <li class="borderexamples" style="margin: 10px;">margin-(left, right, top, bottom): Sets the
+                    margin outside the border of the element</li>
+            </ul>
+            <h3>Sizing Properties</h3>
+            <ul>
+                <li style="width: 40%;border: 1px solid black;">width: Sets the width of the element.</li>
+                <li style="height: 30px;border: 1px solid black;">height: Sets the height of the element</li>
+                <li style="max-width: 100%;border: 1px solid black;">max-width: Sets the maximum width of the
+                    element</li>
+                <li style="max-height: 100%;border: 1px solid black;">max-height: Sets the maximum height of the
+                    element</li>
+                <li style="min-width: 60%;border: 1px solid black;">min-width: Sets the minimum width of the element
+                </li>
+                <li style="min-height: 30px;border: 1px solid black;">min-height: Sets the minimum height of the
+                    element</li>
+            </ul>
+            <h3>List Properties</h3>
+            <ul>
+                <li style="list-style-type: square;">list-style-type: Sets the type of list item marker like disc,
+                    circle, square, or none.</li>
+                <li style="list-style-image: url('marker.png');">list-style-image: Sets the image of the list item
+                    marker.</li>
+                <li style="list-style-position: inside;">list-style-position: Sets the position of the list item
+                    marker like inside or outside.</li>
+            </ul>
+            <h3>Link Properties</h3>
+            <ul>
+                <li><a>You can style links using the a selector or class/id</a></li>
+                <li><a>You can also style their states like hover, visited, active</a></li>
+                <li><a>These can't be styled in-line and need to be styled using a psuedo-class (:hover, :visited,
+                        :active) selector in either the header or styling page</a></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="forms">
+            <h3 style="text-align: center;">Forms</h3>
+            <form class="my-form">
+                <div class="form-group">
+                    <label>Form Styling:</label>
+                    <input type="text" name="name"
+                        placeholder="Giving form a class lets you style the whole form at once">
+                </div>
+                <div class="form-group">
+                    <label>Div Styling:</label>
+                    <input type="email" name="email"
+                        placeholder="Putting a div inside a form-group lets you style the div at once">
+                </div>
+                <div class="form-group">
+                    <label>Button Styling:</label>
+                    <textarea name="message"
+                        placeholder="Giving the button a class lets you style multiple button at once"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="alignment-and-floating" style="padding-bottom: 200px;">
+            <h3 style="text-align: center;">Alignment and Floating</h3>
+            <div class="float-examples">
+                <h3 style="text-align: center;">text-align</h3>
+                <p style="text-align: justify;">Sets the alignment of the text like left, right, center, or justify.</p>
+            </div>
+            <div class="float-examples">
+                <h3 style="text-align: center;">float</h3>
+                <p style="text-align: justify;">Sets the position of the element like left, right, or none.</p>
+            </div>
+            <div class="float-examples">
+                <h3 style="text-align: center;">clear</h3>
+                <p style="text-align: justify;">Clears the float of the element like left, right, or both.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="box-sizing">
+            <h3 style="text-align: center;">Box-sizing</h3>
+            <div id="main-block">
+
+                <h3 style="text-align: center;">box-sizing:border-box</h3>
+                <p style="text-align: justify;">When box-sizing is set to border-box, the width and height include the
+                    padding and border, making the element take up the full width and height of the container.</p>
+            </div>
+            <div id="sidebar">
+                <h3 style="text-align: center;">box-sizing:content-box</h3>
+                <p style="text-align: justify;">When box-sizing is set to content-box, the width and height only include
+                    the
+                    content, not the padding and border, making the element take up the width and height of the content.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="positioning">
+            <h3 style="text-align: center;">Positioning</h3>
+            <p><strong>position:[VALUE]</strong> Adjusts element's position based on the input value</p>
+            <ul>
+                <li><strong>static:</strong> The default position of the element. It is positioned according to the
+                    normal flow of the document.</li>
+                <li><strong>relative:</strong> The element is positioned according to the normal flow of the document,
+                    but can be offset with the top, right, bottom, and left properties.</li>
+                <li><strong>absolute:</strong> The element is positioned according to the normal flow of the document,
+                    but can be offset with the top, right, bottom, and left properties.</li>
+                <li><strong>fixed:</strong> The element is fixed to the viewport and does not move when the page is
+                    scrolled.</li>
+                <li><strong>initial:</strong> The element is set to its initial value.</li>
+                <li><strong>inherit:</strong> The element is set to the value of its parent element.</li>
+            </ul>
+            <form action="positioning.html" target="_blank" style="display: inline;">
+                <button type="submit" class="button">Examples</button>
+            </form>
+        </div>
+        <hr>
+        <div class="background-image-container">
+            <h3 style="text-align: center;">Background Image</h3>
+            <div class="background-image">
+                <h3 style="text-align: center;">background-image: url('background-image.jpg');</h3>
+                <p>The background-image property is used to set the background image of an element.</p>
+            </div>
+            <div class="background-image" style="background-position: bottom;">
+                <h3 style="text-align: center;">background-position: [value];</h3>
+                <p>The background-position property is used to set the position of the background image.</p>
+            </div>
+            <div class="background-image" style="background-size: 300px;">
+                <h3 style="text-align: center;">background-size: [value];</h3>
+                <p>The background-size property is used to set the size of the background image. Repeats by default.
+                    Other values include cover and contain. Cover will scale the image to cover the entire element,
+                    while contain will scale the image to fit the entire element.</p>
+            </div>
+            <div class="background-image" style="background-size: 300px;background-repeat: no-repeat;">
+                <h3 style="text-align: center;">background-repeat: [value];</h3>
+                <p>The background-repeat property is used to set whether the background image repeats. In this case, set
+                    it to 300px like above, but set it to no-repeat to prevent it from repeating.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="pseudo-classes">
+            <h3 style="text-align: center;">Pseudo-classes</h3>
+            <p>Pseudo-classes are used to style elements based on their state. They are used to style elements when a
+                user hovers over them, when they are clicked, when they are focused, etc.</p>
+            <ul class="pseudo-classes-list">
+                <li>Here we use the .pseudo-classes li:[VALUE] to style the list items.</li>
+                <li>We are targeting the first, last, and nth-child(6th) list items.</li>
+                <li>We are also turning every nth-child(even) list item bold and underlined.</li>
+                <li>fifth</li>
+                <li>sixth</li>
+                <li>seventh</li>
+                <li>eighth</li>
+                <li>ninth</li>
+                <li>tenth</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="layout">
+            <h3 style="text-align: center;">Layout</h3>
+            <p>Layout is the process of arranging elements on a page. It is used to create a visual hierarchy and guide the user's eye.</p>
+            <form action="../example-site/index.html" target="_blank" style="display: inline;">
+                <button type="submit" class="button">Example</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

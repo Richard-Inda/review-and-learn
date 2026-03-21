@@ -1,0 +1,111 @@
+body{
+    background-color: rgb(57, 61, 61);
+    color: white;
+    padding-bottom: 300px;
+}
+
+.css-source-lists {
+    font-style: italic;
+}
+
+.borderexamples{
+    border: 1px solid black;
+}
+
+.button{
+    background-color: darkslategrey;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:visited{
+    color: white;
+}
+
+.button:hover{
+    background-color: #45a049;
+}
+
+.my-form{
+    padding: 20px;
+}
+
+.my-form .form-group{
+    padding-bottom: 15px;
+}
+
+.my-form label{
+    display:block;
+}
+
+.my-form input, .my-form textarea{
+    padding: 8px;
+    width: 100%;
+}
+
+.float-examples{
+    float: left;
+    width:33.3%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.box-sizing {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-sizing h3 {
+    flex-basis: 100%;
+}
+
+#main-block {
+    flex: 0 0 60%;
+    background-color: grey;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    flex: 0 0 40%;
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.background-image {
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    color:black;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.background-image h3 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.pseudo-classes li:first-child{
+    color: red;
+}
+
+.pseudo-classes li:last-child{
+    color: blue;
+}
+
+.pseudo-classes li:nth-child(5){
+    color: green;
+}
+
+.pseudo-classes li:nth-child(even){
+    font-weight: bold;
+    text-decoration: underline;
+}
