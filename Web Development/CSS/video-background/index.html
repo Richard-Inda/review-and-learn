@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="showcase">
+        <header class="header">
+            <a class="logo">Decodify</a>
+            <div class="toggle"></div>
+        </header>
+
+        <video src="videos/video1.mp4" autoplay muted loop></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Decode</h2>
+            <h3>Coding</h3>
+            <p>Don’t let your tools consume you. Master the fundamentals so you stay in control of the system.</p>
+            <a href="#">Explore</a>
+        </div>
+
+        <ul class="social">
+            <li>
+                <a href="https://github.com/Richard-Inda" target="_blank" class="social-link">
+                  <img src="images/github.png" alt="Github">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/ricardo-inda-09b923a3/" target="_blank" class="social-link">
+                  <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.richardinda.com/" target="_blank" class="social-link">
+                  <img src="images/portfolio.png" alt="Portfolio Website">
+                </a>
+              </li>
+        </ul>
+
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        const toggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+        const menu = document.querySelector('.menu');
+        toggle.addEventListener('click', () => {
+            showcase.classList.toggle('active');
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
