@@ -105,11 +105,22 @@ body {
     text-align: center;
 }
 
-#showcase h1 {
+#showcase .showcase-text {
     font-size: 50px;
     color: white;
     line-height: 1.6em;
     padding-top: 30px;
+    animation-name: showcase-text;
+    animation-duration: 5s;
+}
+
+@keyframes showcase-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #main {
