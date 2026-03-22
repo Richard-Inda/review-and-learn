@@ -231,7 +231,7 @@
 }
 
 .text a:hover {
-    letter-spacing: 6px;
+    color: var(--highlight-color);
 }
 
 
@@ -241,6 +241,7 @@
 .social {
     position: absolute;
     bottom: 20px;
+    right: 20px;
     z-index: 10;
     display: flex;
     gap: 15px;
