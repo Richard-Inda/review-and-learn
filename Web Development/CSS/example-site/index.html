@@ -4,46 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example Site</title>
+    <title>Web Development Notes</title>
+    <meta name="description" content="This is a website with aggregated notes for Web Development">
+    <meta name="keywords" content="Web Development, CSS, HTML, JavaScript">
+    <meta name="author" content="Ricardo Inda">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header id="main-header">
         <div class="container">
-            <h1>Example Site</h1>
+            <h1>Web Development Notes</h1>
         </div>
     </header>
     <nav id="main-nav">
         <div class="container">
             <ul>
-                <li><a href="../notes/index.html">Css Notes</a></li>
-                <li><a href="../notes/positioning.html">Positioning Examples</a></li>
-                <li><a href="../../HTML/Notes.html">HTML Notes</a></li>
+                <li class="dropdown">
+                    <a href="#">CSS &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../notes/index.html" target="_blank">CSS Notes</a></li>
+                        <li><a href="../notes/positioning.html" target="_blank">Positioning Examples</a></li>
+                        <li><a href="../transitions/transitions.html" target="_blank">Transitions</a></li>
+                        <li><a href="../keyframes/keyframes.html" target="_blank">Keyframes & Animations</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">HTML &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../HTML/Notes.html" target="_blank">HTML Notes</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
     <section id="showcase">
         <div class="container">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</h1>
+            <h1>We don't do this because it's easy. We do this because we thought it would be easy.</h1>
         </div>
     </section>
-    <div class="container">
-        <section id="main">
-            <div class="container">
-                <h1>Welcome to main</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            </div>
-        </section>
-        <aside id="sidebar">
-            <div class="container">
-                <h1>Welcome to sidebar</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            </div>
-        </aside>
-    </div>
+    <main>
+        <div class="container">
+            <section id="main">
+                <div class="container">
+                    <h1>Welcome!</h1>
+                    <p>This is a website with aggregated notes for Web Development. It spans from the basics to the
+                        advanced. It serves as both a reference for me to look
+                        back on when I need to refresh my memory on a particular topic and a place to practice.</p>
+                </div>
+            </section>
+            <aside id="sidebar">
+                <div class="container">
+                    <h1>How To:</h1>
+                    <p>Use the Nav-bar to find the topic you want to view. Within each topic are subtopics & examples.</p>
+                </div>
+            </aside>
+        </div>
+        <div class="container">
+            <section id="disclaimer">
+                <div class="container">
+                    <p>Disclaimer: Notes aren't pretty, but they're functional!</p>
+                </div>
+            </section>
+        </div>
+    </main>
     <footer id="main-footer">
-        <p>Copyright &copy; 2026 Example Site</p>
+        <p>Copyright &copy; 2026 Web Development Notes</p>
     </footer>
 </body>
 
