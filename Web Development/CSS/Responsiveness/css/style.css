@@ -39,6 +39,7 @@ section {
 section.home {
     flex-direction: row;
     margin-top: 0px;
+    width: 50%;
 }
 
 section h1 {
@@ -80,10 +81,10 @@ section p {
     color: var(--text-color);
     z-index: 100;
     cursor: pointer;
+    width: 70%;
 }
 
 /* Toggle */
-
 
 .toggle {
     position: absolute;
@@ -397,9 +398,13 @@ section p {
         display: none;
     }
 
-    section .home{
+    section {
         width: 100%;
         padding: 100px 40px;
+    }
+
+    section.home {
+        width: 100%;
     }
 
     .logo {
@@ -434,6 +439,11 @@ section p {
 @media (max-width: 640px) {
     .services {
         grid-template-columns: 1fr;
+    }
+
+    section.home{
+        width: 100%;
+        margin-top: 50px;
     }
 
     .contact .contact-form form .row {
